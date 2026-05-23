@@ -2,60 +2,112 @@
 
 * {
     border: none;
-    font-family: 'Google Sans Flex', "JetBrainsMono Nerd Font Propo", sans-serif;
-    font-weight: bold;
-    font-size: 13px;
+    border-radius: 0;
+
+    font-family: 'Google Sans Flex', 'JetBrainsMono Nerd Font Propo', sans-serif;
+    
+    min-height: 0;
+    padding: 0;
+    margin: 0;
 }
 
 window#waybar {
-    background-color: transparent;
-}
-
-.modules-right {
-    background-color: @bg0;
-    opacity: 0.85;
-    border: 1px solid @bg3; 
-    border-radius: 8px;
-    padding: 2px 8px;
-    margin-top: 5px;
-}
-
-#workspaces {
     background: transparent;
 }
 
-#workspaces button {
+tooltip {
+    background: @bg0;
+    border: 1px solid @bg3;
+    border-radius: 12px;
+}
+
+tooltip label{
     color: @fg;
-    padding: 0 12px; 
-    margin: 0 2px;
-    transition: all 0.4s cubic-bezier(.55, 0, .28, 1); 
+    padding: 6px;
 }
 
-#workspaces button.active {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+.modules-center{
+    background-color: @bg0;
+    padding: 0 16px;
+    border-radius: 50px;
+    border: 1px solid @bg2;
 }
 
-#workspaces button:hover {
-    color: @purple;
+#workspaces {
+    background-color: @bg0;
+    padding: 5px 3px;
+    margin: 0 0 0 12px;
+    border-radius: 18px;
+    color: @fg;
+}
+
+#workspaces button{
+    font-weight: bold;
+    padding: 0px 6px;
+    margin: 0px 3px;
+    border-radius: 50px;
+    color: transparent;
     background-color: @bg1;
+    transition: all 0.3s ease-in-out;
 }
 
-#clock { color: @purple; padding: 0 10px; }
-#bluetooth { color: @aqua; padding: 0 10px; }
-#pulseaudio { color: @yellow; padding: 0 10px; }
-#network { color: @orange; padding: 0 10px; }
-#battery { color: @green; padding: 0 10px; }
+#workspaces button.active{
+    background: linear-gradient(45deg, @aqua, @purple);
+    color: @bg0;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+}
 
-#battery.critical:not(.charging) {
+#workspaces button:hover{
+    background-color: @purple;
+    color: @bg0;
+    border-radius: 16px;
+    min-width: 40px;
+    background-size: 400% 400%;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+    color: @bg0;
+    border-radius: 16px;
+    min-width: 40px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-pacman,
+#clock,
+#bluetooth,
+#pulseaudio,
+#network,
+#battery {
+
+}
+
+#custom-pacman {
     color: @red;
-    animation-name: blink;
-    animation-duration: 0.8s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
-@keyframes blink {
-    to { opacity: 0.3; }
+#clock {
+    color: @blue;
+}
+
+#bluetooth {
+    color: @blue;
+}
+
+#pulseaudio {
+    color: @yellow;
+}
+
+#network {
+    color: @purple;
+}
+
+#battery {
+    color: @green;
+}
+
+#custom-notification {
+    color: @fg;
 }

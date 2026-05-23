@@ -1,0 +1,5 @@
+browser = "zen-browser"
+terminal = "kitty"      
+fileManager = "nautilus"    
+codeEditor = "vscodium"     
+wallpaperEngine = "awww-daemon" 
