@@ -17,7 +17,7 @@ choice=$(echo -e "$list" | rofi -dmenu -i -p "Select Wallpaper: " -theme "$ROFI_
 
 
 if [ -n "$choice" ]; then
-    FULL_PATH="$WALL_DIR/$ACTICE_THEME/$choice"
+    FULL_PATH="$WALL_DIR/$choice"
     if [ -f "$FULL_PATH" ]; then
         awww img "$WALL_DIR/$choice" --transition-type "$TRANSITION" --transition-fps 144 --transition-duration 2 --transition-angle 70
 	notify-send -r 998 "Wallpaper Applied Successfully" "Current Wallpaper Theme: $ACTIVE_THEME"

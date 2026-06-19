@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to your themes and waybar config
-THEME_DIR="$HOME/.config/themes"
+THEME_DIR="$HOME/.config/hypr/themes"
 CURRENT_THEME_FILE="$HOME/.config/hypr/switchers/current-theme.txt"
 WAYBAR_COLOR_FILE="$HOME/.config/waybar/colors.css"
 ROFI_COLOR_FILE="$HOME/.config/rofi/colors.rasi"
@@ -64,7 +64,7 @@ if [ -n "$selected_theme" ]; then
     if [ -f "$SRC_WAYBAR_COLORS" ]; then
         cp "$SRC_WAYBAR_COLORS" "$WAYBAR_COLOR_FILE"
 	cp "$SRC_WAYBAR_COLORS" "$SWAYNC_COLOR_FILE"
-        ./.config/waybar/scripts/launch.sh
+        $HOME/.config/waybar/scripts/launch.sh
     fi
 
     # Copy the colors.rasi file to rofi directory
