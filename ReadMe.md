@@ -30,7 +30,7 @@ You can change these keybindings in ~/.config/hypr/modules/keybinds.conf
 * swayosd
 * hyprlock
 * hypridle
-* swwww
+* awww
 * firefox
 * vscode
 
