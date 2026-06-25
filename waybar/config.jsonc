@@ -7,26 +7,29 @@
   "modules-center": [
     "custom/pacman",
     "clock",
-    "hyprland/workspaces",
-    "bluetooth", 
-    "network",
+    "hyprland/workspaces", 
     "pulseaudio",
-    "battery",
-    "custom/notification",
+    "cpu",
+    "memory",
+    "disk",
+    "tray",
+    "network",
+    "custom/notifications"
   ],
 
   "custom/pacman": {
-    "format": "󰮯{}",
+    "format": "󰣇 {}",
     "interval": 60,
     "return-type": "json",
-    "on-click": "kitty yay -Syu", // Open terminal to update
+    "exec": "pacman -Qu 2>/dev/null | wc -l | xargs -I{} echo '{\"text\": \"{}\", \"tooltip\": \"Atualizações disponíveis\"}'",
+    "on-click": "kitty -e yay -Syu",
     "signal": 8,
-    "tooltip": false,
+    "tooltip": true
   },
 
   "clock": {
-    "format": "{:%I:%M %p}",
-    "tooltip": false,
+    "format": "󰥔 {:%H:%M  %d/%m/%Y}",
+    "tooltip": false
   },
 
   "hyprland/workspaces": {
@@ -76,17 +79,13 @@
   },
 
   "network": {
-    "interface": "wlan0",
-    "format": "{ifname}",
-    "format-wifi": "",
-    "format-ethernet": "",
-    "format-disconnected": "", //An empty format will hide the module.
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
-    "on-click": "nmrs",
+    "format-wifi": "󰤨  {essid} ({signalStrength}%)",
+    "format-ethernet": "  Ethernet",
+    "format-linked": "󰈀  {ifname} (sem IP)",
+    "format-disconnected": "󰤭  Desconectado",
+    "tooltip-format-wifi": "{essid}\nSinal: {signalStrength}%\nIP: {ipaddr}\nFrequência: {frequency} GHz\n󰜮 {bandwidthDownBytes}  󰜷 {bandwidthUpBytes}",
+    "tooltip-format-ethernet": "{ifname}\nIP: {ipaddr}\n󰜮 {bandwidthDownBytes}  󰜷 {bandwidthUpBytes}",
+    "on-click": "kitty --title nmtui sh -c 'nmtui'"
   },
 
   "battery": {
@@ -100,7 +99,7 @@
     "format-icons": ["", "", "", "", ""],
   },
 
-  "custom/notification": {
+  "custom/notifications": {
     "tooltip": true,
     "format": "<span size='13pt'>{icon}</span>",
     "format-icons": {
