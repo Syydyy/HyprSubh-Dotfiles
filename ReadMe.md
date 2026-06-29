@@ -86,4 +86,10 @@ and then paste those files with appropriate file name inside their designated fo
 
 and vallahh your custom theme is added to custom theme swithcer
 
+##4. Installer
+
+this is the installer, I'm still improving it but it should work for now, I'll make more changes and improvements.
+
+bash <(curl -fsSL https://raw.githubusercontent.com/Syydyy/HyprSubh-Dotfiles/main/install.sh)
+
 
