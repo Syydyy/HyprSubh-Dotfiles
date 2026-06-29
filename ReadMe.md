@@ -1,5 +1,4 @@
-# Um guia básico para a minha configuração do Hyprland
-
+# A Basic Guide to my Hyprland Setup
 *Note: Updated to latest lua version hyprland 0.55*
 
 ## Some important keybinds:
