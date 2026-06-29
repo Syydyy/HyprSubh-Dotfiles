@@ -17,7 +17,7 @@
 * Logout and close all apps - Super + CTRL + P
 
 
-You can change these keybindings in ~/.config/hypr/modules/keybinds.conf
+You can change these keybindings in ~/.config/hypr/modules/keybinds.lua
 
 ## Some basic dependencies: 
 * hyprland
@@ -54,7 +54,7 @@ Then to match custom theme switcher to your vscode, install the following themes
 
 #### 1. Modules:
 
-All the functionality of hyprland has been split into amny modules placed inside of hypr/module/ folder which are sourced to hyprland.conf file.
+All the functionality of hyprland has been split into amny modules placed inside of hypr/module/ folder which are sourced to hyprland.lua file.
 
 
 #### 2. Switchers:
