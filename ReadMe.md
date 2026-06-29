@@ -91,5 +91,10 @@ and vallahh your custom theme is added to custom theme swithcer
 this is the installer, I'm still improving it but it should work for now, I'll make more changes and improvements.
 
 
+git clone https://github.com/Syydyy/Archlinux-Hyprland.git
+cd Archlinux-Hyprland
+chmod +x install.sh
+./install.sh
 
+bash <(curl -fsSL https://raw.githubusercontent.com/Syydyy/Archlinux-Hyprland/main/install.sh)
 
