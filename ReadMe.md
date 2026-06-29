@@ -1,4 +1,4 @@
-# A Basic Guide to my Hyprland Setup
+# Um guia básico para a minha configuração do Hyprland
 
 *Note: Updated to latest lua version hyprland 0.55*
 
